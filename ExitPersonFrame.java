@@ -62,13 +62,18 @@ public class ExitPersonFrame extends JFrame {
                     int check = ep.exitingPerson();
                     if (check == 0) {
                         JOptionPane.showMessageDialog(null, "This person is not registered. Invalid ID");
+                        dispose();
+                    SecureRunner f = new SecureRunner();
                     } else if (check == 2) {
                         JOptionPane.showMessageDialog(null, "This person has not come to university today!");
+                        dispose();
+                    SecureRunner f = new SecureRunner();
                     } else if (check == 3) {
                         JOptionPane.showMessageDialog(null, "This person has exited from University!");
-                    }
-                    dispose();
+                        dispose();
                     SecureRunner f = new SecureRunner();
+                    }
+                    
 
                 } catch (Exception rt) {
                     System.out.println("3exception here");
